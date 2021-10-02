@@ -9,6 +9,10 @@ public class Controllable : MonoBehaviour
 
     [SerializeField] bool ready;
 
+    public bool Ready {
+        get; private set;
+    }
+
     private void Start() {
         KeyboardController kcontrol;
 
