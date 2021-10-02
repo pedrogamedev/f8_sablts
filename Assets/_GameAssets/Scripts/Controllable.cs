@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//FOOBAR
 public class Controllable : MonoBehaviour
 {
     public static GameObject current;
