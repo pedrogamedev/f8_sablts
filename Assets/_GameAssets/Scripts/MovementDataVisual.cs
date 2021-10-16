@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementDataVisual : MonoBehaviour
 {
-    public MovementData movementData;
+    public MovementDataSO movementData;
 
     SpriteRenderer sprite;
 

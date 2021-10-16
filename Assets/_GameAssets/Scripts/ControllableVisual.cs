@@ -8,6 +8,7 @@ public class ControllableVisual : MonoBehaviour
     [SerializeField] ParticleSystem effect;
 
     Controllable controllable;
+    bool playing;
 
     private void Start() {
         controllable = GetComponent<Controllable>();
@@ -16,11 +17,13 @@ public class ControllableVisual : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(controllable.Ready) {
+        if(controllable.Ready && !playing) {
             effect.Play();
+            playing = true;
         }
-        else {
+        else if(!controllable.Ready) {
             effect.Stop();
+            playing = false;
         }
     }
 }

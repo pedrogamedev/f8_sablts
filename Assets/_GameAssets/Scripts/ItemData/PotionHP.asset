@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cde0a2866cb52845b4cfb44477f23b0, type: 3}
-  m_Name: SlowMovement
+  m_Script: {fileID: 11500000, guid: a322bfc5768da114d91b76f739bbb782, type: 3}
+  m_Name: PotionHP
   m_EditorClassIdentifier: 
-  speed: 1.14
-  color: {r: 0, g: 0.023376942, b: 1, a: 1}
+  itemName: PotionHp

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TopDownMovement : MonoBehaviour
 {
-    public MovementData movementData;
+    public MovementDataSO movementData;
     Vector2 dir;
     Rigidbody2D rb;
     IController controller;
