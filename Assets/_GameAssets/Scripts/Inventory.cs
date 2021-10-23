@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<ItemDataSO> items = new List<ItemDataSO>();
+    public Dictionary<ItemDataSO, int> items = new Dictionary<ItemDataSO, int>();
 
     public void AddItem(ItemDataSO item) {
-        items.Add(item);
+        if (items.ContainsKey(item)) {
+            items[item] += 1;
+        }
+        else {
+            items.Add(item, 1);
+        }
 
         foreach (var i in items) {
-            Debug.Log(i.name);
+            Debug.Log(i.Key.name);
         }
     }
 }
