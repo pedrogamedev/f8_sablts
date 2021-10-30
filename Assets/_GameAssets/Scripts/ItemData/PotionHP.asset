@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PotionHP
   m_EditorClassIdentifier: 
   itemName: PotionHp
+  itemIcon: {fileID: 21300000, guid: e52cbe4b97916334c9ec9aa395d79fda, type: 3}

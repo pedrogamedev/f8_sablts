@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PotionMP
   m_EditorClassIdentifier: 
   itemName: PotionMP
+  itemIcon: {fileID: 21300000, guid: cd108ac1e6a3b8a49929c82009040ada, type: 3}
