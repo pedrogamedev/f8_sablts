@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour
 {
+    public UnityEvent<ItemDataSO, int> OnItemAdded;
+    public UnityEvent<Inventory> OnInventoryChanged;
+
     public Dictionary<ItemDataSO, int> items = new Dictionary<ItemDataSO, int>();
 
     public void AddItem(ItemDataSO item) {
@@ -14,8 +18,7 @@ public class Inventory : MonoBehaviour
             items.Add(item, 1);
         }
 
-        foreach (var i in items) {
-            Debug.Log(i.Key.name);
-        }
+        OnItemAdded?.Invoke(item, items[item]);
+        OnInventoryChanged?.Invoke(this);
     }
 }
