@@ -18,7 +18,7 @@ public class ItemIcon : MonoBehaviour
     }
 
     public void ItemClicked() {
-        item.UseItem();
+        item.Use();
     }
 }
 

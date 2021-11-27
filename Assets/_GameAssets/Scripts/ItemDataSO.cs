@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IUsable
 {
-    void UseItem();
+    void Use();
 }
 
 [CreateAssetMenu(fileName = "itemData", menuName = "Scriptable Objects/ItemData", order = 2)]
@@ -13,7 +13,12 @@ public class ItemDataSO : ScriptableObject, IUsable
     public string itemName;
     public Sprite itemIcon;
 
-    public void UseItem() {
+    public override string ToString() {
+        var baseString = base.ToString();
+        return $"{baseString}\n{itemName}";
+    }
 
+    public virtual void Use() {
+        Debug.Log($"{itemName} was used!");
     }
 }

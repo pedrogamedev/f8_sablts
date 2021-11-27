@@ -14,7 +14,11 @@ public class RecoveryItemDataSO : ItemDataSO, IUsable
     public Stat stat;
     public float ammount;
 
-    public void UseItem() {
+    public override string ToString() {
+        return base.ToString();
+    }
+
+    public void Use() {
         Debug.Log("Used a " + itemName + " to restore " + ammount + " of " + stat);
     }
 }

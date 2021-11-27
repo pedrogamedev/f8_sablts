@@ -7,7 +7,13 @@ public class EquipmentItemDataSO : ItemDataSO, IUsable
 {
     public float atkPower;
 
-    public void UseItem() {
+    public override string ToString() {
+        var baseStringEquip = base.ToString();
+        return $"{baseStringEquip}\n{itemName}:{atkPower}";
+    }
+
+    public override void Use() {
+        base.Use();
         Debug.Log("Equiped a " + itemName + " with " + atkPower + " atk power");
     }
 }
