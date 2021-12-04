@@ -14,8 +14,7 @@ public class ItemDataSO : ScriptableObject, IUsable
     public Sprite itemIcon;
 
     public override string ToString() {
-        var baseString = base.ToString();
-        return $"{baseString}\n{itemName}";
+        return $"{itemName}";
     }
 
     public virtual void Use() {

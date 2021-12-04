@@ -9,6 +9,8 @@ public static class GameManager
     public static float half_cell_width = 8f;
     public static float half_cell_height = 5f;
 
+    public static GameObject Target;
+
     public static Vector2 GetGridPosition(Vector3 position) {
         //var newgridx = Mathf.Floor((position.x + GameManager.half_cell_width) / GameManager.cell_width);
         //var newgridy = Mathf.Floor((position.y + GameManager.half_cell_height) / GameManager.cell_height);
@@ -16,5 +18,11 @@ public static class GameManager
         var newgridy = Mathf.Floor(position.y / GameManager.cell_height);
 
         return new Vector2(newgridx, newgridy);
+    }
+
+    public static void Dummy() {
+        Target = MonoBehaviourHook.instance.target;
+        Debug.Log($"GameManagerTarget: {Target.name}");
+        Debug.Log("I should be called just once!");
     }
 }

@@ -18,7 +18,7 @@ public class dummy : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Y)) {
-            uitext.text = item.ToString();
+            uitext.text = System.Guid.NewGuid().ToString();
         }
     }
 }
