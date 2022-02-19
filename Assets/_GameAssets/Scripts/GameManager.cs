@@ -19,10 +19,4 @@ public static class GameManager
 
         return new Vector2(newgridx, newgridy);
     }
-
-    public static void Dummy() {
-        Target = MonoBehaviourHook.instance.target;
-        Debug.Log($"GameManagerTarget: {Target.name}");
-        Debug.Log("I should be called just once!");
-    }
 }

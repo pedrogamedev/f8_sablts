@@ -6,10 +6,6 @@ public class MonoBehaviourHook : MonoBehaviour
 {
     public static MonoBehaviourHook instance;
 
-    public GameObject target;
-    
-    public float updateTimer;
-
     private void Awake() {
         if(instance == null) {
             instance = this;
@@ -18,13 +14,12 @@ public class MonoBehaviourHook : MonoBehaviour
         Destroy(this);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        GameManager.Dummy();
+
     }
 
     private void Update() {
-
+        UpdateManager.Update();
     }
 }

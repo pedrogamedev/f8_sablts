@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
 
-public class Player : MonoBehaviour
+public class Player : CustomBehaviour
 {
     public GameObject test;
 
@@ -25,12 +25,12 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Start() {
+    protected override void Start() {
+        base.Start();
         var sprite = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update() {
+    public override void OnUpdate() {
         if (!canWalk) {
             rb.velocity = Vector2.zero;
             return;
