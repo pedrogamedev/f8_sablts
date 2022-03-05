@@ -25,8 +25,7 @@ public class Player : CustomBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    protected override void Start() {
-        base.Start();
+    protected void Start() {
         var sprite = GetComponent<SpriteRenderer>();
     }
 
